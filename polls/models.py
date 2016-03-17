@@ -11,10 +11,10 @@ class Question(models.Model):
         return self.question_text
 
     def was_created_recently(self):
-        print(self.created)
-        print(timezone.now())
-        print(datetime.timedelta(days=1))
         return self.created >= timezone.now() - datetime.timedelta(days=1)
+    was_created_recently.admin_order_field = 'created'
+    was_created_recently.boolean = True
+    was_created_recently.short_description = 'Published recently?'
 
 
 class Choice(models.Model):
