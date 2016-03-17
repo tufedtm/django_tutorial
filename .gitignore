@@ -1,0 +1,8 @@
+.idea/
+media/
+node_modules/
+
+*.log
+*.pyc
+db.sqlite3
+local_settings.py
