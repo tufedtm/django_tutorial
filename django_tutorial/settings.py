@@ -111,5 +111,5 @@ STATIC_URL = '/static/'
 
 try:
     from .local_settings import *
-except:
-    pass
+except ImportError as err:
+    raise err
