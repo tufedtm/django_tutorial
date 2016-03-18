@@ -14,13 +14,11 @@ class QuestionAdmin(admin.ModelAdmin):
         }),
         ('Date information', {
             'fields': ['created'],
-            'classes': ['collapse']
         }),
     ]
     inlines = [ChoiceInline]
     list_display = ['question_text', 'created', 'was_created_recently']
     list_filter = ['created']
-    readonly_fields = ['created']
     search_fields = ['question_text']
 
 
